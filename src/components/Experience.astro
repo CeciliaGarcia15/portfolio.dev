@@ -1,0 +1,30 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+
+const experiences = [
+    {
+        date: 'Junio 2022 - Actualidad',
+        title: 'Desarrolladora junior en Laravel - Codex-sa',
+        description: 'Colaboro en el creación y desarrollo de aplicaciones web enfocadas en la optimización de procesos municipales utilizando Laravel.',
+        link: '#'
+    },
+    {
+        date: 'Abril 2024 - Actualidad',
+        title: 'Frontend Developer con Astro y Tailwind - Freelance',
+        description: 'Desarrollo Ecommerce  estáticas y dinámicas utilizando Astro y Tailwind CSS.',
+        link: '#'
+    }
+];
+
+---
+<ol class="relative border-s border-gray-200 ml-3">                  
+    {
+        experiences.map(experience => (
+            <li class="mb-10 ms-4">
+                <ExperienceItem {...experience} />
+            </li>
+        ))
+    }
+    
+</ol>
+
